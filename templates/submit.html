@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SUBMIT PAGE</title>
+    <link rel="stylesheet"  href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<center><h1>THE FORM TEST</h1></center>
+<form method="POST" action="/">
+    {{ form.csrf_token }}
+    {{ form.name.label }} {{ form.name(size=20) }}
+    <input type="submit" value="Go">
+</form>
+
+
+</body>
+</html>

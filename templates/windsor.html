@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'bootstrap/base.html' %}
+{% block title%}MY BOOTSTRAP TEST{% endblock %}
+
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='css/windsor.css')}}">
+{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Test</title>
+
+   
+	
+	{%block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+	<div class="navbar-header">
+	<button type="button" class="navbar-toggle"
+	data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		</button>
+		
+		<a class="navbar-brand" href="/home">HOME</a>
+		</div>
+		<div class="navbar-collapse collapse">
+		 <ul class="nav navbar-nav">
+		  <li><a href="/">ABOUT US</a></li>
+		  <li><a href="/destinations">DESTINATIONS</a></li>
+		  <li><a href="/contact_us">CONTACT US</a></li>
+		  
+		  </ul>
+		  </div>
+		
+</div>		
+
+		
+		</div>
+</div>		
+{% endblock %}
+</head>
+<body>
+{% block content %}
+<center><h1>Visit Windsor!</h1></center>
+<center><h4>The home of the Royal Family and beautiful ancient town<h4></center>
+
+<center>
+<form>
+<a class="btn btn-primary"  href="/windsortodo" role="button" >THINGS TO DO</a>
+<a class="btn btn-primary"  href="/windsoreat" role="button" >EAT</a>
+<a class="btn btn-primary"  href="/windsortravel" role="button" >BOOK A COACH</a>
+
+</form>
+
+</center>
+{% endblock %}
+</body>
+</html>

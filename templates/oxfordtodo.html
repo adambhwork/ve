@@ -1,0 +1,64 @@
+<head>
+<style>
+#todo {
+  font-family: Cambria, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  font-weight: bold;
+}
+
+#todo td, #todo th {
+  border: 1px solid #ddd;
+  padding: 8px;
+
+}
+
+#todo tr:nth-child(even){background-color: #f2f2f2;}
+
+#todo tr:hover {background-color: #5B95F3;}
+
+#todo th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: blue;
+  color: white;
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+<table id="todo">
+    <thead>
+    <tr>
+
+        <th>Name</th>
+		<th>Address</th>
+
+		<th>Contact</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for row in value %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+				<td>{{row[2]}}</td>
+
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>

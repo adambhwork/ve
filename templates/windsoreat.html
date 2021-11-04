@@ -1,0 +1,64 @@
+<head>
+<style>
+#restaurants {
+  font-family: Cambria, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  font-weight: bold;
+}
+
+#restaurants td, #restaurants th {
+  border: 1px solid #ddd;
+  padding: 8px;
+
+}
+
+#restaurants tr:nth-child(even){background-color: #f2f2f2;}
+
+#restaurants tr:hover {background-color: #5B95F3;}
+
+#restaurants th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: blue;
+  color: white;
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+<table id="restaurants">
+    <thead> 
+    <tr> 
+        
+        <th>Name</th> 
+		<th>Style</th> 
+		<th>Address</th>
+		<th>Contact</th> 
+    </tr> 
+    </thead> 
+    <tbody> 
+        {% for row in value %}  
+            <tr> 
+                <td>{{row[0]}}</td> 
+                <td>{{row[1]}}</td> 
+				<td>{{row[2]}}</td> 
+				<td>{{row[3]}}</td> 
+            </tr> 
+        {% endfor %} 
+    </tbody> 
+</table> 
+
+</body>
+</html>
